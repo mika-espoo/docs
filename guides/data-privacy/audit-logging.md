@@ -152,18 +152,11 @@ A more comprehensive guide, incl. tutorials, is currently under development.
 
 <span id="audit-logging-in-saas" />
 
-For deployment in general, please follow the [deployment guide](../deployment/). Check the rest of this guide before actually triggering the deployment (i.e., executing `cf deploy`).
-
-Here is what you need to do additionally,  to integrate with SAP Audit Log Service:
-
-1. In your space, create a service instance of the _SAP Audit Log Service_ (`auditlog`) service with plan `premium`.
-2. Add the service instance as _existing resource_ to your `mta.yml` and bind it to your application in its _requires_ section. Existing resources are defined like this:
-      ```yml
-      resources:
-      - name: my-auditlog-service
-        type: org.cloudfoundry.existing-service
-      ```
-
+Integrate the audit logging service for Cloud Foundry or Kyma with this command:
+```sh
+cds add audit-logging
+```
+[Learn more about deploying applications](../deployment/){.learn-more}
 [Learn more about *Audit Log Write API for Customers*](https://help.sap.com/docs/btp/sap-business-technology-platform/audit-log-write-api-for-customers?version=Cloud){.learn-more}
 
 
@@ -484,11 +477,11 @@ By default, all log messages are sent through a transactional outbox. This means
 
 This provides an ultimate level of resiliency, plus additional benefits:
 
-- **Audit log messages are guaranteed to be delivered** &mdash; even if the audit log service should be down for a longer time period.
+- **Audit log messages are guaranteed to be delivered** — even if the audit log service should be down for a longer time period.
 
-- **Asynchronous delivery of log messages** &mdash; the main thread doesn't wait for requests being sent and successfully processed by the audit log service.
+- **Asynchronous delivery of log messages** — the main thread doesn't wait for requests being sent and successfully processed by the audit log service.
 
-- **False log messages are avoided** &mdash;  messages are forwarded to the audit log service on successfully committed requests; and skipped in case of rollbacks.
+- **False log messages are avoided** — messages are forwarded to the audit log service on successfully committed requests; and skipped in case of rollbacks.
 
 This transparently applies to all implementations, even [custom implementations](#custom-implementation). You can opt out of this default by configuring outbox: false in the configuration, for example, as we do in the default configuration for development:
 
