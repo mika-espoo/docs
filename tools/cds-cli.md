@@ -44,11 +44,11 @@ Use `cds version` to get information about your installed package version:
 <span class="cwd">$</span> <span class="cmd">cds</span> <span class="args">version</span>
 
 <em>@capire/samples:</em> 2.0.0
-<em>@sap/cds:</em> 7.9.2
-<em>@sap/cds-compiler:</em> 4.9.4
-<em>@sap/cds-dk:</em> 7.9.3
+<em>@sap/cds:</em> 8.0.4
+<em>@sap/cds-compiler:</em> 5.0.6
+<em>@sap/cds-dk:</em> 8.0.3
 <em>@sap/cds-dk (global):</em> 7.9.3
-<em>@sap/cds-mtxs:</em> 1.18.1
+<em>@sap/cds-mtxs:</em> 2.0.3
 <em>@sap/eslint-plugin-cds:</em> 3.0.4
 <em>Node.js:</em> v18.13.0
 <em>home:</em> .../node_modules/@sap/cds
@@ -58,9 +58,9 @@ Use `cds version` to get information about your installed package version:
 | @capire/samples        | https://github.com/sap-samples/cloud-cap-samples.git |
 |------------------------|------------------------------------------------------|
 | Node.js                | v18.13.0                                             |
-| @sap/cds               | 7.9.2                                                |
-| @sap/cds-compiler      | 4.9.4                                                |
-| @sap/cds-dk            | 7.9.3                                                |
+| @sap/cds               | 8.0.4                                                |
+| @sap/cds-compiler      | 5.0.6                                                |
+| @sap/cds-dk            | 8.0.3                                                |
 | @sap/eslint-plugin-cds | 3.0.4                                                |
 </pre>
 
@@ -279,7 +279,7 @@ cds add data --filter "books$"
 
 ::: details Special characters like `?` or `*` need escaping or quoting in shells
 
-The escape character is usually the backslash, e.g. `\?`.  Quote characters are `'` or `"` with varying rules between shells.  Consult the documentation for your shell here.
+The escape character is usually the backslash, for example, `\?`.  Quote characters are `'` or `"` with varying rules between shells.  Consult the documentation for your shell here.
 :::
 
 #### Sample records <Since version="7.9.0" of="@sap/cds-dk" />
@@ -471,6 +471,7 @@ CDS_MERMAID_ELEMENTS=false|all|keys  # no, all, or only key elements
 CDS_MERMAID_MIN=false|true           # remove unused entities
 CDS_MERMAID_NAMESPACES=false|true    # group entities by namespace
 CDS_MERMAID_QUERIES=false|true       # show queries/projections
+CDS_MERMAID_DIRECTION=TB|BT|LR|RL    # layout direction of the diagram
 ```
 
 <div id="mermaid-cli-more" />
