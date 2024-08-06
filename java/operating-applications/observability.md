@@ -578,10 +578,12 @@ management:
   endpoint:
     health:
       show-components: always # shows individual indicators
+
   endpoints:
     web:
       exposure:
         include: health # only expose /health as web endpoint
+        probes.enabled: true
   health:
      defaults.enabled: false # turn off all indicators by default
      ping.enabled: true
