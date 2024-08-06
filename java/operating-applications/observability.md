@@ -618,7 +618,8 @@ Endpoint `/actuator/health` delivers a response (HTTP response code `200` for up
     "liveness",
     "readiness"
   ]
-}```
+}
+```
 
 It might be advantageous to expose information on a detailed level. This configuration is only an option for a [protected](#protected-health-checks) health endpoint:
 
@@ -634,7 +635,7 @@ Find all details about configuration opportunities in [Spring Boot Actuator](htt
 
 #### Kubernetes Probes
 
-Starging with version 3.2.0 of CAP Java, the endpoints `/actuator/health/liveness` and `/actuator/health/readiness` are opened by default. Both endpoints are suggested to be used for [Kubernetes Probes](https://docs.spring.io/spring-boot/reference/actuator/endpoints.html#actuator.endpoints.kubernetes-probes) 
+Starting with version 3.2.0 of CAP Java, the endpoints `/actuator/health/liveness` and `/actuator/health/readiness` are opened by default. Both endpoints are intenended for the [Kubernetes Probes](https://docs.spring.io/spring-boot/reference/actuator/endpoints.html#actuator.endpoints.kubernetes-probes). They can also be used as [CloudFoundry health checks](https://docs.cloudfoundry.org/devguide/deploy-apps/healthchecks.html).
 
 #### Custom Health Indicators { #custom-health-indicators}
 
