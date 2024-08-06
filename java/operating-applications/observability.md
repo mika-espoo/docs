@@ -589,7 +589,7 @@ management:
      db.enabled: true
 ```
 
-The example configuration makes Spring exposing the health endpoint with health indicators `db` and `ping`. It enables also the health propbes `liveness` and `readiness` which are usefull in Kubernetes and CloudFoundry environments. Other indicators ready for auto-configuration such as `diskSpace` are omitted. All components contributing to the aggregated status are shown individually, which helps to understand the reason for overall status `DOWN`.
+The example configuration makes Spring exposing the health endpoint with health indicators `db` and `ping`. It enables also the health probes `liveness` and `readiness` which are usefull in Kubernetes and CloudFoundry environments. Other indicators ready for auto-configuration such as `diskSpace` are omitted. All components contributing to the aggregated status are shown individually, which helps to understand the reason for overall status `DOWN`.
 
 ::: tip
 For multitenancy scenarios, CAP Java SDK replaces default the `db` indicator with an implementation that includes the status of all tenant databases.
