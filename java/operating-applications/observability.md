@@ -635,7 +635,7 @@ Find all details about configuration opportunities in [Spring Boot Actuator](htt
 
 #### Kubernetes Probes
 
-Starting with version 3.2.0 of CAP Java, the endpoints `/actuator/health/liveness` and `/actuator/health/readiness` are opened by default. Both endpoints are intenended for the [Kubernetes Probes](https://docs.spring.io/spring-boot/reference/actuator/endpoints.html#actuator.endpoints.kubernetes-probes). They can also be used as [CloudFoundry health checks](https://docs.cloudfoundry.org/devguide/deploy-apps/healthchecks.html).
+Starting with version 3.2.0 of CAP Java, the endpoints `/actuator/health/liveness` and `/actuator/health/readiness` are opened by default. Both endpoints are intended for the [Kubernetes Probes](https://docs.spring.io/spring-boot/reference/actuator/endpoints.html#actuator.endpoints.kubernetes-probes). They can also be used as [CloudFoundry health checks](https://docs.cloudfoundry.org/devguide/deploy-apps/healthchecks.html).
 
 #### Custom Health Indicators { #custom-health-indicators}
 
